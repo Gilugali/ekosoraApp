@@ -24,6 +24,7 @@ app.post('/add',async  (req, res)=>{
         meantFor: req.body.meantFor,
         expiry: (req.body.expiry == '')? Date.now() + 2592000000 : new Date(req.body.expiry)
     })
+    const saveToTerm = require('../models/ml-term').updateOne({}, {$push:{announcements: newAnnouncement._id}})
     try{
         let saveAnnouncement = await newAnnouncement.save()
         res.json({code: "#Success", doc: saveAnnouncement})

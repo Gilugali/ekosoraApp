@@ -5,6 +5,10 @@ const termSchema = mongo.Schema({
      start:Date,
      end:Date,
      status:Boolean,
+     announcements:[{
+          type:mongo.Schema.ObjectId,
+          ref:"announcemnt"
+     }],
      national:{
        type:mongo.Schema.Types.ObjectId,
        ref:'National'

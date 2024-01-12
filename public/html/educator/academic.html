@@ -159,22 +159,77 @@
                 </div>
             </div>
             <div class="TheForm">
-                <form action="#">
+
+                <form action="#" id="addSubject" style="position: relative;">
                     <h1>New Subject</h1>
-                   
+
                     </label>
                     <label for="">
-                        <span id="RecordName">Subject Name</span>
+                        <span id="AddName">Subject Name</span>
                         <input type="text" id="RecordNameBox" name="recordName">
                     </label>
-                   
+
                     <button id="GetIn">SAVE</button>
+                    <button id="close"
+                        style="width: 60px; border-radius:50px; margin: 10px; background: tomato; color: white; position: absolute; top:0; right: 0; padding: 5px;">
+                        <span class="material-symbols-outlined" style="color: white; font-size: 28px; margin: 5px;" >
+                            close
+                        </span>
+                    </button>
                 </form>
+
+                <form action="#" id="addLevel" style="position: relative;">
+                    <h1>New Level</h1>
+
+                    </label>
+                    <label for="">
+                        <span id="AddName">Level Name</span>
+                        <input type="text" id="RecordNameBox" name="recordName">
+                    </label>
+
+                    <button id="GetIn">SAVE</button><button id="close"
+                        style="width: 60px; border-radius:50px; margin: 10px; background: tomato; color: white; position: absolute; top:0; right: 0; padding: 5px;"><span
+                            class="material-symbols-outlined" style="color: white; font-size: 28px; margin: 5px;" >
+                            close
+                        </span></button>
+                </form>
+
+                <form action="#" id="addCombination" style="position: relative;">
+                    <h1>New Combination</h1>
+
+                    </label>
+                    <label for="">
+                        <span id="AddName"> Name</span>
+                        <label for="">
+                            <span id="LessonsDropDown">
+                                Level
+                                <img src="../img/down.svg">
+                            </span>
+                            <div class="Lessons"></div>
+                            <!-- <select name="lessons" id="SubjectChoice">
+                            <option value="">--SELECT--</option>
+                        </select> -->
+                        </label>
+                        <label for="">
+                            <span id="AddName">Subject Name</span>
+                            <input type="text" id="RecordNameBox" name="recordName">
+                        </label>
+
+                        <button id="GetIn">SAVE</button>
+                        <button id="close"
+                        style="width: 60px; border-radius:50px; margin: 10px; background: tomato; color: white; position: absolute; top:0; right: 0; padding: 5px;"><span
+                            class="material-symbols-outlined" style="color: white; font-size: 28px; margin: 5px;" >
+                            close
+                        </span></button>
+
+                </form>
+
+
             </div>
         </div>
-        
+
     </div>
-  
+
 </body>
 <script src="../js/chart.js"></script>
 <script src="../js/common.js"></script>
