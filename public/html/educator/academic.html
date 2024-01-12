@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Quantico&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/newRecord.css">
+    <link rel="stylesheet" href="../css/announcements.css">
+    <link rel="stylesheet" href="/public/css/sidebar.css">
+    <title>Dashboard | eKOSORA</title>
+</head>
+<style id="style2">
+    body>*:not(.LoadingOverlay) {
+        z-index: -1;
+        pointer-events: none;
+        display: none;
+    }
+
+    @keyframes loadingAnimation {
+        0% {
+            transform: translateX(0px);
+        }
+
+        50% {
+            transform: translateX(60px);
+        }
+
+        100% {
+            transform: translateX(0px);
+        }
+    }
+
+    .LoadingOverlay div:before {
+        content: '';
+        width: 6px;
+        height: 40px;
+        background: #3f7cac;
+        margin: auto;
+
+        margin-bottom: 20px;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 16px;
+    }
+
+    @keyframes apparate {
+        0% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .LoadingOverlay div:after {
+        content: '';
+        width: 49px;
+        height: 40px;
+        background: #f0f0f0;
+        position: absolute;
+        top: 0;
+        left: 6px;
+
+    }
+</style>
+
+<body>
+    <div class="LoadingOverlay"
+        style="position: absolute;background: #f0f0f0;width: 100vw;height: 100vh;z-index: 1000;top: 0;left: 0;display: grid;place-content: center;">
+        <img src="../img/favicon.png"
+            style="height: 40px;width: 40px;margin: auto;/* animation: apparate 1s infinite linear; */">
+        <div
+            style="/* width: 40px; *//* height: 40px; *//* background: var(--main-blue); *//* margin: auto; */animation: loadingAnimation 1s infinite linear;/* margin-bottom: 20px; */position: relative;text-align: center;/* width: fit-content; *//* transform: translateY(-50px); */margin-top: -40px;">
+        </div>
+        <p style="text-align: center;">Loading...</p>
+    </div>
+    <div id="NavBar" class="CommonNav">
+        <div class="LeftSide">
+            <div class="HamburgerContainer">
+                <p id="HamburgerMenu" class="clickedMenu"></p>
+            </div>
+            <!-- <h1 id="TheLogo"></h1> -->
+            <a href="/dashboard">
+                <img src="../img/bigLogo.svg" alt="eKOSORA" id="TheLogo">
+                <img src="../img/logo.svg" alt="eKOSORA" id="TheSmallLogo">
+            </a>
+        </div>
+        <div class="Middle">
+            <h1>Academic</h1>
+        </div>
+        <div class="theButtons">
+            <button id="LogOutBTN" style="font-size: 16px; font-weight: bold;">Logout</button>
+            <i class="bx bx-log-out" style="color:#ffffff"></i>
+            <!-- <button id="SignUpBTN">SIGN UP</button> -->
+        </div>
+    </div>
+    <div class="Content">
+        <div class="Menu show">
+            <div class="MenuItem">
+                <a href="/dashboard">Dashboard</a>
+            </div>
+            <div class="MenuItem">
+                <a href="/programs">Marks</a>
+            </div>
+            <div class="MenuItem">
+                <a href="/course">Courses</a>
+            </div>
+            <div class="MenuItem">
+                <a href="/student">Students</a>
+            </div>
+            <div class="MenuItem">
+                <a href="/settings">Settings</a>
+            </div>
+            <div class="Profile">
+                <img src="loading.gif" alt="profile">
+                <div>
+                    <h3></h3>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="QuickFeatureContainer">
+                <h1>update Academic</h1><br>
+                <div class="QuickFeatures">
+                    <a class="QuickFeature" id="subject">
+                        <span class="material-symbols-outlined" id="marks">
+                            library_add
+                        </span>
+                        <p>Add Subject?</p>
+                    </a>
+                    <a class="QuickFeature" id="combination">
+                        <span class="material-symbols-outlined" style="color: darkblue;">
+                            add_notes
+                        </span>
+                        <p>Add Combination</p>
+                    </a>
+                    <a class="QuickFeature" id="level">
+                        <span class="material-symbols-outlined" id="marks">
+                            add_circle
+                        </span>
+                        <p>Level</p>
+                    </a>
+                </div>
+            </div>
+            <div class="TheForm">
+                <form action="#">
+                    <h1>New Subject</h1>
+                   
+                    </label>
+                    <label for="">
+                        <span id="RecordName">Subject Name</span>
+                        <input type="text" id="RecordNameBox" name="recordName">
+                    </label>
+                   
+                    <button id="GetIn">SAVE</button>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+  
+</body>
+<script src="../js/chart.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/oneliners.js"></script>
+<script src="../js/editAcademic.js"></script>
+<script src="../js/dashboard.js"></script>
+
+</html>

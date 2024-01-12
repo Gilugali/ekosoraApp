@@ -1,0 +1,70 @@
+/* JQuery DataTable */
+@import url("https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css");
+
+/* Google Fonts Import Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+ li .sub-menu{
+  padding: 6px 6px 14px 80px;
+  margin-top: -10px;
+  background:  tomato;
+  display: none;
+}
+li.showMenu .sub-menu{
+  display: block;
+  /* background-color: black; */
+}
+ li .sub-menu a{
+  color: #fff;
+  font-size: 15px;
+  padding: 5px 0;
+  white-space: nowrap;
+  opacity: 0.6;
+  transition: all s ease;  
+}
+ li .sub-menu a:hover{
+  opacity: 1;
+  background:  #1d1b31;
+  color: white;
+  transition: 0.3s ease;
+  width: 100%;
+  border-radius: 10px;
+}
+li .sub-menu{
+  position: absolute;
+  left: 100%;
+  top: -10px;
+  margin-top: 0;
+  padding: 10px 20px;
+  border-radius: 0 6px 6px 0;
+  opacity: 0;
+  display: block;
+  pointer-events: none;
+  transition: 0s;
+}
+ li:hover .sub-menu{
+  top: 0;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+}
+li .sub-menu .link_name{
+  display: none;
+}
+ li .sub-menu .link_name{
+  font-size: 18px;
+  opacity: 1;
+  display: block;
+}
+.sidebar .nav-links li .sub-menu.blank{
+  opacity: 1;
+  pointer-events: auto;
+  padding: 3px 20px 6px 16px;
+  opacity: 0;
+  pointer-events: none;
+}
+.sidebar .nav-links li:hover .sub-menu.blank{
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (max-wid

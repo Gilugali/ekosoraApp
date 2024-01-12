@@ -1,0 +1,89 @@
+table {
+    border-radius: 20px;
+    /* background: blue; */
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    min-width: 1000px;
+    /* border-radius: 10px;
+    display: none; */
+}
+
+tr {
+    cursor: pointer;
+    position: relative;
+    border-left: 5px solid transparent;
+    transition: none;
+
+}
+
+tr:hover {
+    /* background: rgba(0,0,0,0.1) !important; */
+    border-left-color: tomato;
+    border-radius: 50px;
+    transition: .6s ease;
+}
+
+th {
+    background: var(--darker-blue);
+    color: white;
+    text-transform: capitalize;
+}
+
+tr:nth-child(even) {
+    background: rgba(0,0,0,0.2);
+}
+
+td, th {
+    padding: 10px;
+    text-align: start;
+    width: 100px;
+    word-break: break-all;
+}
+
+/*  */
+td img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+td:nth-of-type(1) {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+.ActionTD img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    padding: 5px;
+    border: 2px solid transparent;
+}
+
+.ActionTD img:hover {
+    border-color: var(--main-blue);
+}
+
+.AddBTN {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--main-blue);
+    /* padding: 20px; */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-content: center;
+}
+
+.AddBTN > a {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+}
